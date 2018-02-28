@@ -1,0 +1,10 @@
+/*可以在这里添加你自己的css*/
+body {
+    font-family: "微软雅黑", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #394263;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+img {
+    max-width: 100%
+}

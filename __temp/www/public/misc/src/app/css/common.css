@@ -1,0 +1,96 @@
+@charset "utf-8";
+body { font-family: "Microsoft YaHei","Arial"; font-size: 12px; color: #454545; margin: 0; padding: 0; background: #fff; overflow-x: hidden; }
+textarea,input,button { font-family: "Microsoft YaHei"; outline: 0; }
+img { border: none; }
+ul,li,h1,h2,h3,h4,h5,p,dl,dd { margin: 0; padding: 0; list-style: none; }
+a { cursor: pointer; }
+.area { width: 100%; height: auto; float: left; }
+.fl { float: left; }
+.fr { float: right; }
+.tc { text-align: center; }
+.tl { text-align: left; }
+.tr { text-align: right; }
+.layui-layer-page.box .layui-layer-content {overflow: visible}
+
+.pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+}
+.pager li {
+    display: inline;
+    margin-right: 5px;
+}
+.pager li > a,
+.pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.pager .next > a,
+.pager .next > span {
+    float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+    float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+.logo {margin-top: 40px}
+
+.menu-toggler {
+    float: right;
+    display: none;
+    margin: 23px 3px 0 13px;
+    width: 40px;
+    height: 30px;
+    background: url(../images/menu-toggler.png) center center;
+    background-repeat: no-repeat;
+    opacity: 0.7 ;
+    filter: alpha(opacity=70) ;
+}
+.menu-toggler:hover {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+header { height: 150px; }
+header img,header .top-nav,header .top-nav li,header .top-nav li i,header .top-nav li span { display: inline-block; vertical-align: middle; }
+header .top-nav { float: right; }
+header .top-nav,header .top-nav a { line-height: 150px; font-size: 16px; color: #222222; }
+header .top-nav a { width: 100%; display: block; padding-left: 20px; padding-right: 20px}
+header .top-nav li i { width: 10px; height: 10px; background: url("../images/nav.png") no-repeat; margin-right: 8px; }
+header .top-nav li.now i,header .top-nav li a:hover i { background: url("../images/nav-now.png") no-repeat; }
+header .top-nav li:last-child { font-weight: bold; margin-right: 0; }
+header .top-nav li:last-child i { background: url("../images/nav-last.png") no-repeat; }
+
+@media (max-width: 1200px) {
+    .logo {width: 220px; margin-top:15px;}
+    .menu-toggler {display: block}
+    .main {width: auto!important;}
+    footer {height: auto}
+    footer .main>div b a {display: block; padding: 10px 0}
+    footer .logo-footer {float: left; margin-bottom: 15px}
+    #my-video {display: none}
+    header {height: auto; margin-bottom: 20px; padding-bottom: 10px}
+    header .nav {float: none; width: 100%; margin-top: 15px; border: 1px solid #eee; border-radius: 5px; display: none; background-color: #fff}
+    footer .main>div {display: block!important;}
+    header .nav li {border-bottom: 1px solid #eee; margin-right: 0; display: block}
+    header .top-nav,header .top-nav a {line-height: 2}
+    header .nav li:last-child {border-bottom: none}
+}

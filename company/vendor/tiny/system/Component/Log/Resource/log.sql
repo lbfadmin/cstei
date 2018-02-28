@@ -1,0 +1,27 @@
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+CREATE TABLE IF NOT EXISTS `{table}` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `type` varchar(50) NOT NULL DEFAULT '' COMMENT '类型',
+  `location` varchar(50) NOT NULL DEFAULT '' COMMENT '位置',
+  `level` tinyint(3) unsigned NOT NULL DEFAULT '6' COMMENT '日志级别',
+  `message` text NOT NULL COMMENT '消息',
+  `data` text NOT NULL COMMENT '额外的数据',
+  `timestamp` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '时间戳',
+  `microtime` decimal(15,4) unsigned NOT NULL DEFAULT '0.0000' COMMENT '微秒时间',
+  PRIMARY KEY (`id`),
+  KEY `type` (`type`),
+  KEY `timestamp` (`timestamp`),
+  KEY `level` (`level`),
+  KEY `location` (`location`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='日志表' AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

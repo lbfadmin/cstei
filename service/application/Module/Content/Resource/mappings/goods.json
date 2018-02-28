@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "goods": {
+      "properties": {
+        "id": {"type": "integer"},
+        "name": {"type": "string", "analyzer": "ik_max_word"},
+        "category_id": {"type": "integer"},
+        "time_created": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss"},
+        "time_updated": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss"}
+      }
+    }
+  }
+}

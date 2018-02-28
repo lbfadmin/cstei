@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "info": {
+      "properties": {
+        "id": {"type": "integer"},
+        "title": {"type": "string", "analyzer": "ik_max_word"},
+        "category_id": {"type": "integer"},
+        "source": {"type": "string", "analyzer": "ik_max_word"},
+        "keywords": {"type": "string", "analyzer": "ik_max_word"},
+        "summary": {"type": "string", "analyzer": "ik_max_word"},
+        "body": {"type": "string", "analyzer": "ik_max_word"},
+        "status": {"type": "short"},
+        "time_published": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss"},
+        "time_created": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss"},
+        "time_updated": { "type": "date", "format": "yyyy-MM-dd HH:mm:ss"}
+      }
+    }
+  }
+}

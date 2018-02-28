@@ -1,0 +1,13 @@
+目录结构：
+程序分为3个application：
+1、admin：物业管理
+2、company：企业管理
+3、service：webservice
+对应的代码放在相应的application中，三个application用的cstei_admin,cstei_main数据库。
+
+
+
+
+
+
+

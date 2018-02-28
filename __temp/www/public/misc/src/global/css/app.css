@@ -1,0 +1,49 @@
+.page-header .page-header-menu .hor-menu .navbar-nav>li.active>a, .page-header .page-header-menu .hor-menu .navbar-nav>li.active>a:hover, .page-header .page-header-menu .hor-menu .navbar-nav>li.current>a, .page-header .page-header-menu .hor-menu .navbar-nav>li.current>a:hover {
+    background: #2267ad;
+}
+.page-footer {
+    background: #0c437b;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu, .page-header .page-header-menu .hor-menu .navbar-nav>li.open>a, .page-header .page-header-menu .hor-menu .navbar-nav>li:hover>a, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:active, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:focus, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:hover {
+    background: #487baf;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li.open>a, .page-header .page-header-menu .hor-menu .navbar-nav>li:hover>a, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:active, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:focus, .page-header .page-header-menu .hor-menu .navbar-nav>li>a:hover {
+    background: #487baf !important;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu li:hover>a {
+    background: #6397cc;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li>a {
+    font-size:15px;
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li>a, .page-header .page-header-menu .hor-menu .navbar-nav>li>a>i {
+    color: #becbbc
+}
+.page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu li.active>a, .page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu li.active>a:hover, .page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu li.current>a, .page-header .page-header-menu .hor-menu .navbar-nav>li .dropdown-menu li.current>a:hover {
+    background: #6397cc
+}
+.table-no-results, .no-data {text-align: center; color: #999}
+.required {color: red; font-weight: bold}
+
+.portlet.light>.portlet-title>.caption.caption-md>.caption-subject {font-weight: normal !important;}
+
+.content-loading {padding: 20px; text-align: center; color: #888}
+
+.exception-handler {padding: 20px 30px}
+.exception-handler dt {display: inline-block; font-weight: normal; font-size: 1.5em}
+.exception-handler dt,
+.exception-handler dd {margin-bottom: 20px}
+@media (max-width: 991px) {
+    .page-content { padding-top: 15px}
+    .page-head .page-title {padding-bottom: 4px}
+    .page-header .page-logo img {height: auto!important; max-width: 260px}
+}
+@media (max-width: 767px) {
+    .page-header .page-logo img {max-width: 220px}
+}
+@media (min-width: 991px) {
+    .page-header-menu {background:#0e4f91!important;}
+}
+@media screen and (min-width: 767px) {
+    .table-responsive {overflow: visible}
+}

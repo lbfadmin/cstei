@@ -1,0 +1,63 @@
+.head-wrapper,
+.content-container {max-width: 1100px; margin: auto; background-color: #fff; padding: 20px}
+.logo {max-width: 100%}
+.head-wrapper {padding-top: 18px; margin-bottom: 20px}
+.block {margin-bottom: 20px; border-bottom: 1px solid #e0e0e0; padding-bottom: 20px}
+.block:last-child {border-bottom: none}
+.block-title {color: #1d59b3; font-weight: bold; margin-bottom: 20px}
+.block .section {height: 150px; background-color: #efefef; border: 5px solid #efefef; margin: 10px; text-align: center}
+.block-base .name {margin-top: 20px; color: #696969}
+.block-base .value {margin-top: 30px; font-size: 20px; color: #000}
+.block-base .section.type {border:5px solid #7fdbf6; background-color: #fff}
+.block-base .section.type .value,
+.block-base .section.status .value {font-size: 24px}
+.block-base .section.status {border:5px solid #80c269; background-color: #fff}
+.block-manufacture .logo {height: 120px; background-repeat: no-repeat; background-position: center; background-size: contain; border: 1px solid #eee}
+.block-manufacture ul {padding-left: 0}
+.block-manufacture li {list-style: none; padding: 5px 0}
+.block-manufacture .name {font-size: 18px; color: #221815; font-weight: bold}
+
+.block-trace .nav-tabs {border-bottom: none; text-align: center}
+.block-trace .nav-tabs li {width: 20%; text-align: center; margin-bottom: 10px}
+.block-trace .nav-tabs li:not(.active) .status {width: 24px; height: 24px; display: inline-block; background-color: #6ab82c; border-radius: 25px; text-indent: -100em;overflow: hidden}
+.block-trace .nav-tabs li a {width: 150px; height: 150px; margin: auto; border-radius: 150px; border: 5px solid #80c269}
+.block-trace .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {border: 5px solid #80c269}
+.block-trace .nav-tabs li .name {margin-top: 35px; font-size: 24px;color: #333; margin-bottom: 15px}
+.block-trace .nav-tabs li.active a {color: #fff; background-color: #80c269}
+.block-trace .nav-tabs li.active a .name {color: #fff}
+.block-trace .nav-tabs li.check a {border-color: #00b7ee}
+.block-trace .nav-tabs li.check.active a {background-color: #00b7ee}
+.block-trace .tab-pane {padding-top: 30px}
+.block-trace .table-header {font-weight: bold; margin-bottom: 10px; border-left: 3px solid #80c269; padding-left: 10px}
+
+.no-results {text-align: center; color: #888}
+
+.empty-result {background-color: #f5f5f5; text-align: center; font-size: 2em; padding: 5em 0}
+
+.form-search {max-width: 1100px; text-align: center; padding-top: 50px}
+.form-search .title {font-size: 18px; margin-bottom: 30px}
+.form-search .form-control, .form-search .btn {border-radius: 0}
+.form-search input {background-color: #f5f5f5; border-color: #eee; box-shadow: none}
+
+.form-search .btn {padding-left: 45px; padding-right: 45px; background-color: #ffda48; color: #fff; font-weight: bold}
+.search-result {max-width: 1000px; text-align: center; margin: auto; margin-top: 50px}
+.search-contents {background-color: #f5f5f5; margin-top: 20px; padding: 30px; background-image: url("../images/trace/caret-down.png"); background-position: top center; background-repeat: no-repeat}
+.search-contents .link {margin-bottom: 20px}
+.search-contents .link a {word-wrap: break-word}
+
+.dropdown-menu {left: auto; right: 0}
+
+/* 小屏 */
+@media (max-width: 768px) {
+    .block-trace .nav-tabs li {width: auto; height: 90px}
+    .block-trace .nav-tabs li a {width: auto; height: auto; border: none}
+    .block-trace .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {border-width: 2px}
+    .block-trace .nav-tabs li a .name {margin-top: 0; font-size: 1.5em}
+    li.dropdown {z-index: 100; background-color: #fff}
+    .navbar-nav .open .dropdown-menu {border: 1px solid rgba(0,0,0,.15); border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); box-shadow: 0 6px 12px rgba(0,0,0,.175);}
+    .empty-result {padding: 1em 0; font-size: 1.5em}
+}
+/* 大屏 */
+@media (min-width: 768px) {
+    .form-search input.form-control {width: 400px}
+}

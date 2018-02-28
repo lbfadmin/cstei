@@ -1,0 +1,18 @@
+{
+    "require": {
+        "psr/log": "^1.0",
+        "predis/predis": "^1.1",
+        "joomla/input": "^1.2",
+        "elasticsearch/elasticsearch": "^5.0",
+        "symfony/dependency-injection": "^3.1",
+        "guzzlehttp/guzzle": "^6.2",
+        "symfony/console": "^3.1",
+        "symfony/event-dispatcher": "^3.1",
+        "hashids/hashids": "^1.0",
+        "php-amqplib/php-amqplib": "^2.6",
+        "mongodb/mongodb": "^1.0",
+        "aliyuncs/oss-sdk-php": "^2.0",
+        "symfony/dom-crawler": "^3.1",
+        "symfony/css-selector": "^3.1"
+    }
+}

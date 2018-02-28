@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>平台实时数据</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="<?=$this->misc('vendor/bootstrap/3.3.7/css/bootstrap.min.css')?>">
+<link rel="stylesheet" href="<?=$this->misc('vendor/font-awesome/4.7.0/css/font-awesome.min.css')?>">
+<style type="text/css">
+    body {background-color: #eef1f5}
+    .dropdown-menu {left: auto; right: 0; }
+    .head-wrapper,
+    .content-container {margin: auto; background-color: #fff; padding: 20px}
+    .content-container {margin-left: 20px; margin-right: 20px; padding-top: 0; margin-bottom: 20px; background: none}
+    .portlet.light { padding: 12px 20px 15px; background-color: #fff; }
+    .content-container > .row {background-color: #fff}
+    .logo {max-width: 100%}
+    .head-wrapper {padding-top: 18px; margin-bottom: 20px}
+    .water-chart {height: 265px}
+    .portlet.light>.portlet-title { padding: 0; min-height: 48px; }
+    .portlet>.portlet-title { border-bottom: 1px solid #eee; padding: 0; margin-bottom: 10px; min-height: 41px;
+        border-radius: 4px 4px 0 0;}
+    /* 小屏 */
+    @media (max-width: 768px) {
+        li.dropdown {z-index: 100; background-color: #fff}
+        .navbar-nav .open .dropdown-menu {border: 1px solid rgba(0,0,0,.15); border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); box-shadow: 0 6px 12px rgba(0,0,0,.175); background-color: #fff!important;position: absolute;}
+        .content-container {padding-left: 10px; padding-right: 10px}
+    }
+    @media (max-width: 767px) {
+        .navbar-nav .open .dropdown-menu {position: absolute;background-color: #fff!important;}
+    }
+</style>
+</head>
+
+<body>
+<div class="head">
+    <div class="head-wrapper">
+        <a href="/"><img class="logo" src="<?=$this->misc('app/images/mask-ctn-logo.png')?>"></a>
+        <div class="pull-right">
+            <ul class="nav navbar-nav">
+                <li class="dropdown dropdown-user dropdown-dark">
+                    <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <span class="username username-hide-mobile">帮助</span>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-default">
+                        <li>
+                            <a href="javascript:" style="display: block; text-align:center; font-weight: bold">客服电话：<span style="font-size:1.2em">400-612-2810</span></a>
+                        </li>
+                        <li class="divider"> </li>
+                        <li>
+                            <a href="<?=$_CONFIG['common']['wwwBaseUrl']?>" ><i class="fa fa-external-link"> 罗博飞官网</i></a>
+                        </li>
+                        <li class="divider"> </li>
+                        <li style="padding-bottom: 20px; text-align: center">
+                            <div style="text-align: center; margin-bottom: 15px">微信公众号</div>
+                            <img src="<?=$this->misc('app/images/page/wx-qr.jpg')?>">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content-container">
+    <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-12 col-sm-12 monitor">
+            <div class="portlet light ">
+                <div class="portlet-title">
+                    <div class="caption caption-md">
+                        <i class="icon-bar-chart font-dark hide"></i>
+                        <span class="caption-subject font-green-steel uppercase bold"><a href="javascript:" class="btn"><i class="fa fa-cubes"></i> 区域海洋环境情况 </a></span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="row list-separated charts">
+                        <div class="col-md-7 col-lg-8">
+                            <div data-area="<?=$_DEPARTMENT->province_name . $_DEPARTMENT->city_name . $_DEPARTMENT->district_name . $_DEPARTMENT->block_name . $_DEPARTMENT->community_name?>" id="chart3" class="chart" style="height: 450px"></div>
+                            <h5 style="text-align: center;font-weight: bold"><?=$_DEPARTMENT->province_name . $_DEPARTMENT->city_name . $_DEPARTMENT->district_name?>海洋监测采集大数据</h5>
+                        </div>
+                        <div class="col-md-5 col-lg-4 env-warning">
+                            <h4 style="color:#b91a1e"><i style="width: 26px;height: 25px;background: url(<?=$this->misc('app/images/status_alert.png')?>) center no-repeat; background-size:cover;display: inline-block;margin-right: 5px;vertical-align: middle"></i>预警信息</h4>
+                            <div style="max-height: 420px; overflow-y: auto">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-md-8">预警信息</th>
+                                        <th class="col-md-4">预警时间</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php if ($warnings):?>
+                                        <?php foreach ($warnings as $warning):?>
+                                            <tr>
+                                                <td>
+                                                    <div><?=$warning->title?></div>
+                                                </td>
+                                                <td><?=$warning->time?></td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="4"  class="no-data">没有预警信息。</td>
+                                        </tr>
+                                    <?php endif ?>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="portlet light water-quality">
+                <div class="portlet-title">
+                    <i class="icon-bar-chart font-dark hide"></i>
+                    <span class="caption-subject font-green-steel uppercase bold"><a href="javascript:" class="btn"><i class="fa fa-list"></i>水质监测</a> </span>
+                    <div class="pull-right form-inline">
+                        <div class="input-group">
+                            <span class="input-group-addon">监测点</span>
+                            <select name="points" class="form-control">
+                                <?php if (!empty($monitoring_points)):?>
+                                    <?php foreach ($monitoring_points as $monitoring_point):?>
+                                        <option value="<?=$monitoring_point->id?>"><?=$monitoring_point->name?></option>
+                                    <?php endforeach;?>
+                                <?php endif ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body row">
+                    <div class="col-md-4">
+                        <h4><i style="width: 26px;height: 25px;background: url(/misc/src/pages/img/status_ok.png) center no-repeat; background-size:cover;display: inline-block;margin-right: 5px;vertical-align: middle"></i> 平均环境水温</h4>
+                        <div class="water-temps">
+                            <div class="water-chart" id="chart4"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><i style="width: 26px;height: 25px;background: url(/misc/src/pages/img/status_ok.png) center no-repeat; background-size:cover;display: inline-block;margin-right: 5px;vertical-align: middle"></i> 平均环境PH值</h4>
+                        <div class="water-temps">
+                            <div class="water-chart" id="chart5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><i style="width: 26px;height: 25px;background: url(/misc/src/pages/img/status_ok.png) center no-repeat; background-size:cover;display: inline-block;margin-right: 5px;vertical-align: middle"></i> 平均环境溶解氧</h4>
+                        <div class="water-temps">
+                            <div class="water-chart" id="chart6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<?=$this->misc('vendor/jquery/jquery.min.js')?>" type="text/javascript"></script>
+<script src="<?=$this->misc('vendor/bootstrap/3.3.7/js/bootstrap.min.js')?>" type="text/javascript"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=sfUt2020b4OwyE1GA7mic3zUgAH5f3Gu"></script>
+<script src="<?=$this->misc('vendor/echarts/echarts.min.js')?>"></script>
+<script src="<?=$this->misc('vendor/echarts/extension/bmap.min.js')?>"></script>
+<script src="<?=$this->misc('vendor/mapv/mapv.min.js')?>"></script>
+<script src="<?=$this->misc('app/js/dashboard.js')?>"></script>
+</body>
+</html>

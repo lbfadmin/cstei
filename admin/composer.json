@@ -1,0 +1,8 @@
+{
+    "require": {
+        "psr/log": "^1.0",
+        "joomla/input": "^1.2",
+        "symfony/dependency-injection": "^3.1",
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}

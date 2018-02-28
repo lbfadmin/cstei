@@ -1,0 +1,72 @@
+@charset "utf-8";
+.main { width: 1200px; margin: 0 auto; overflow: hidden; }
+
+.index-ctn li .wrapper {height: 316px; padding: 15px 20px;position: relative; z-index: 1;margin-top: 4px; margin-right: 4px}
+.index-ctn li a { text-decoration: none; }
+.index-ctn li.one .wrapper {background: url("../images/index-ctn-bg1.png") right 10px no-repeat #63b2e1}
+.index-ctn li.one .wrapper:hover { background-color:#4da0d1; }
+.index-ctn li.two .wrapper { background: url("../images/index-ctn-bg2.png") right 10px no-repeat #63e18d; }
+.index-ctn li.two .wrapper:hover { background-color: #55d580; }
+.index-ctn li.three .wrapper { background: url("../images/index-ctn-bg3.png") right 10px no-repeat #fbd260 }
+.index-ctn li.three .wrapper:hover { background-color: #ebc24f; }
+.index-ctn li h3 { font-size: 25px; color: #fff; }
+.index-ctn li>div { line-height: 24px; color: #fff; }
+.index-ctn li>div p { font-size: 14px; }
+.index-ctn li>div b { font-size: 16px; }
+.index-ctn li button { width: 136px; height: 35px; border: none; cursor: pointer; line-height: 35px; color: #fff; position: absolute; z-index: 2; bottom: 20px; left: 15px; font-size: 15px; font-weight: bold; }
+.index-ctn li button a { width: 100%; display: block; }
+.index-ctn .co-login {background-color: #fff; color: #63b2e1}
+.index-ctn .co-login a {color: #63b2e1!important;}
+.index-ctn li.one button a { color: #fff; }
+.index-ctn li.two button { background: #fff; }
+.index-ctn li.two button a { color: #009944; }
+.index-ctn li.three button { background: #fff; }
+.index-ctn li.three button a { color: #ed734e; }
+
+.banner { position: relative; overflow: auto;  height: 590px; background: url("../images/banner-bg.jpg") no-repeat; background-size: cover;}
+.banner li { list-style: none; background-size: cover; background-repeat: no-repeat; background-position: center}
+.banner ul li { float: left; height: 590px}
+.unslider {position: relative; z-index: 100}
+.unslider-nav ol li {width: 10px!important; height: 10px!important;}
+.unslider-nav {position: absolute; width: 100px; text-align: center; bottom: 10px; left: 50%; margin-left: -50px;}
+
+footer {margin-top: 40px; background: #102974; padding: 40px 30px 20px 30px; }
+footer .main { width: 1140px; color: #fff; }
+footer .main a { color: #fff; text-decoration: none; }
+footer .main a:hover { color: #fff; text-decoration: underline; }
+footer .main>div,footer .main>div p span,footer .main>div p i { display: inline-block; vertical-align: middle; }
+footer .main>div b { font-size: 15px; }
+footer .main>div b a { margin-right: 40px; }
+footer .main>div p { margin-top: 15px; }
+footer .main>div p i { width: 25px; height: 35px; background: url("../images/footer-img.png") no-repeat; margin-left: 8px;}
+
+.mask-bg { width: 100%; height: 100%; background: #000; opacity: .3; position: fixed; z-index: 1001; top: 0; left: 0; }
+.mask-ctn { width: 620px; height: 530px; background: #fff; }
+.mask-ctn .head { height: 186px; padding: 60px 0 0 45px; background: url("../images/mask-ctn-head.jpg") no-repeat; position: relative; z-index: 1002; }
+.mask-ctn .head .shut { width: 30px; height: 30px; background: url("../images/shut.png") no-repeat; display: block; position: absolute; z-index: 1003; top: -10px; right: -10px; cursor: pointer; }
+.mask-ctn .head img:last-child { margin-left: 30px; }
+.mask-ctn .ctn { width: 375px; margin: 50px 0 0 125px; }
+.mask-ctn .ctn input, .mask-ctn .ctn select { width: 96%; height: 46px; background: #e5eee6; font-size: 15px; padding-left: 4%; border: 0; margin-bottom: 28px; box-sizing: content-box}
+.mask-ctn .ctn .btns button { width: 180px; height: 46px; text-align: center; cursor: pointer; line-height: 46px; color: #fff; font-weight: bold; float: left; font-size: 18px; border: 0; background: #4cdd85; }
+.mask-ctn .ctn .btns button:last-child { float: right; }
+.mask-ctn .ctn .btns button:hover { background: #2cc468; }
+
+@media (min-width: 992px) {
+    .index-ctn li:not(:first-child) {padding-left: 0;}
+    .index-ctn li:not(:last-child) {padding-right: 0;}
+}
+@media (max-width: 992px) {
+    .banner {height: auto;}
+    .banner ul li {height: 380px}
+}
+@media (max-width: 768px) {
+    .banner {height: auto;}
+    .banner ul li {height: 320px}
+}
+@media (min-width: 1200px) {
+    .banner {background: none}
+}
+@media (max-width: 1200px) {
+    .unslider {margin-top: 15px}
+    .index-ctn li .wrapper {margin-left: 4px; margin-right: 4px}
+}
